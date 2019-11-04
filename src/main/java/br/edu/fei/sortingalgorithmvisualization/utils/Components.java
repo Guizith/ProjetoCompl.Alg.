@@ -1,0 +1,18 @@
+package br.edu.fei.sortingalgorithmvisualization.utils;
+
+public enum Components
+{
+	GENERATE_ARRAY_BUTTON,
+	SORT_ARRAY_BUTTON,
+	BUBBLE_SORT_OPTION,
+	INSERTION_SORT_OPTION,
+	SELECTION_SORT_OPTION,
+	QUICK_SORT_OPTION,
+	HEAP_SORT_OPTION,
+	COUNTING_SORT_OPTION,
+	RADIX_SORT_OPTION,
+	SHELL_SORT_OPTION,
+	INTRO_SORT_OPTION;
+	
+	private Components() {}
+}

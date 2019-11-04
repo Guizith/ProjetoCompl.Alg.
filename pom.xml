@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.edu.fei</groupId>
+  <artifactId>sorting-algorithm-visualization</artifactId>
+  <version>1.0</version>
+  <name>sorting-algorithm-visualization</name>
+  
+  <dependencies>
+	<dependency>
+		<groupId>jfree</groupId>
+		<artifactId>jfreechart</artifactId>
+		<version>${jfree-jfreechart.version}</version>
+	</dependency>
+  	
+  </dependencies>
+  
+  <properties>
+  	<jfree-jfreechart.version>1.0.13</jfree-jfreechart.version>
+  </properties>
+  
+  <build>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <configuration>
+        <archive>
+          <manifest>
+            <mainClass>br.edu.fei.sortingalgorithmvisualization.Main</mainClass>
+          </manifest>
+        </archive>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+</project>
