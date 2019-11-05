@@ -4,7 +4,7 @@ public final class UIState
 {
 	private final Components clickedButton;
 	private final Components selectedOption;
-	private final int arraySizeTextFieldValue;
+	private final String arraySizeTextFieldValue;
 	
 	public UIState(final UIStateBuilder builder)
 	{
@@ -23,7 +23,7 @@ public final class UIState
 		return this.selectedOption;
 	}
 	
-	public final int getArraySizeTextFieldValue()
+	public final String getArraySizeTextFieldValue()
 	{
 		return arraySizeTextFieldValue;
 	}
@@ -32,7 +32,7 @@ public final class UIState
 	{
 		private Components clickedButton;
 		private Components selectedOption;
-		private int arraySizeTextFieldValue;
+		private String arraySizeTextFieldValue;
 		
 		private UIStateBuilder() {}
 		
@@ -53,7 +53,7 @@ public final class UIState
 			return this;
 		}
 		
-		public UIStateBuilder setArraySizeTextFieldValue(final int arraySizeTextFieldValue)
+		public UIStateBuilder setArraySizeTextFieldValue(final String arraySizeTextFieldValue)
 		{
 			this.arraySizeTextFieldValue = arraySizeTextFieldValue;
 			return this;

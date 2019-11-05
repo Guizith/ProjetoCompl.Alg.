@@ -11,7 +11,7 @@ public final class InsertionSort implements Algorithm
 	public void sort(final int[] array, final ChartPanel chartPanel) throws Exception
 	{
 		int j;
-	    int k; 
+	    int k;
 	    int i;
 	    
 	    for (j = 1; j < array.length; j++)

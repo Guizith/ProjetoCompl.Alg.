@@ -2,20 +2,29 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>br.edu.fei</groupId>
   <artifactId>sorting-algorithm-visualization</artifactId>
-  <version>1.0</version>
+  <version>${br.edu.fei.sorting-algorithm-visualization.version}</version>
   <name>sorting-algorithm-visualization</name>
   
   <dependencies>
 	<dependency>
 		<groupId>jfree</groupId>
 		<artifactId>jfreechart</artifactId>
-		<version>${jfree-jfreechart.version}</version>
+		<version>${jfree.jfreechart.version}</version>
 	</dependency>
+	
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-lang3</artifactId>
+	    <version>${org.apache.commons.lang.commons-lang3.version}</version>
+	</dependency>
+	
   	
   </dependencies>
   
   <properties>
-  	<jfree-jfreechart.version>1.0.13</jfree-jfreechart.version>
+  	<br.edu.fei.sorting-algorithm-visualization.version>1.0</br.edu.fei.sorting-algorithm-visualization.version>
+  	<jfree.jfreechart.version>1.0.13</jfree.jfreechart.version>
+  	<org.apache.commons.lang.commons-lang3.version>3.9</org.apache.commons.lang.commons-lang3.version>
   </properties>
   
   <build>

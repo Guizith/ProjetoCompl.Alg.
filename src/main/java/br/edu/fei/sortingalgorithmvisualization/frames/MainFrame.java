@@ -25,7 +25,7 @@ import br.edu.fei.sortingalgorithmvisualization.utils.Strings;
 import br.edu.fei.sortingalgorithmvisualization.utils.UIState;
 import br.edu.fei.sortingalgorithmvisualization.utils.UIState.UIStateBuilder;
 
-public class MainFrame extends JFrame
+public final class MainFrame extends JFrame
 {	
 	private static final long serialVersionUID = -993075444907151235L;
 	
@@ -56,104 +56,104 @@ public class MainFrame extends JFrame
 		this.setTitle(Strings.APPLICATION_NAME);
 		this.setResizable(false);
 		
-		container = this.getContentPane();
-		container.setLayout(null);
+		this.container = this.getContentPane();
+		this.container.setLayout(null);
 		
-		radioButtonGroup = new ButtonGroup();
+		this.radioButtonGroup = new ButtonGroup();
 		
-		bubbleSortRadioButton = new JRadioButton();
-		bubbleSortRadioButton.setText(Strings.BUBBLE_SORT_RADIO_BUTTON_TEXT);
-		bubbleSortRadioButton.setBounds(20, 564, 85, 23);
-		container.add(bubbleSortRadioButton);
+		this.bubbleSortRadioButton = new JRadioButton();
+		this.bubbleSortRadioButton.setText(Strings.BUBBLE_SORT_RADIO_BUTTON_TEXT);
+		this.bubbleSortRadioButton.setBounds(20, 564, 85, 23);
+		this.container.add(this.bubbleSortRadioButton);
 		
-		insertionSortRadioButton = new JRadioButton();
-		insertionSortRadioButton.setText(Strings.INSERTION_SORT_RADIO_BUTTON_TEXT);
-		insertionSortRadioButton.setBounds(20, 590, 95, 23);
-		container.add(insertionSortRadioButton);
+		this.insertionSortRadioButton = new JRadioButton();
+		this.insertionSortRadioButton.setText(Strings.INSERTION_SORT_RADIO_BUTTON_TEXT);
+		this.insertionSortRadioButton.setBounds(20, 590, 95, 23);
+		this.container.add(this.insertionSortRadioButton);
 		
-		selectionSortRadioButton = new JRadioButton();
-		selectionSortRadioButton.setText(Strings.SELECTION_SORT_RADIO_BUTTON_TEXT);
-		selectionSortRadioButton.setBounds(20, 616, 95, 23);
-		container.add(selectionSortRadioButton);
+		this.selectionSortRadioButton = new JRadioButton();
+		this.selectionSortRadioButton.setText(Strings.SELECTION_SORT_RADIO_BUTTON_TEXT);
+		this.selectionSortRadioButton.setBounds(20, 616, 95, 23);
+		this.container.add(this.selectionSortRadioButton);
 		
-		mergeSortRadioButton = new JRadioButton();
-		mergeSortRadioButton.setText(Strings.MERGE_SORT_RADIO_BUTTON_TEXT);
-		mergeSortRadioButton.setBounds(20, 642, 95, 23);
-		container.add(mergeSortRadioButton);
+		this.mergeSortRadioButton = new JRadioButton();
+		this.mergeSortRadioButton.setText(Strings.MERGE_SORT_RADIO_BUTTON_TEXT);
+		this.mergeSortRadioButton.setBounds(20, 642, 95, 23);
+		this.container.add(this.mergeSortRadioButton);
 		
-		quickSortRadioButton = new JRadioButton();
-		quickSortRadioButton.setText(Strings.QUICK_SORT_RADIO_BUTTON_TEXT);
-		quickSortRadioButton.setBounds(130, 564, 85, 23);
-		container.add(quickSortRadioButton);
+		this.quickSortRadioButton = new JRadioButton();
+		this.quickSortRadioButton.setText(Strings.QUICK_SORT_RADIO_BUTTON_TEXT);
+		this.quickSortRadioButton.setBounds(130, 564, 85, 23);
+		this.container.add(this.quickSortRadioButton);
 		
-		heapSortRadioButton = new JRadioButton();
-		heapSortRadioButton.setText(Strings.HEAP_SORT_RADIO_BUTTON_TEXT);
-		heapSortRadioButton.setBounds(130, 590, 85, 23);
-		container.add(heapSortRadioButton);
+		this.heapSortRadioButton = new JRadioButton();
+		this.heapSortRadioButton.setText(Strings.HEAP_SORT_RADIO_BUTTON_TEXT);
+		this.heapSortRadioButton.setBounds(130, 590, 85, 23);
+		this.container.add(this.heapSortRadioButton);
 		
-		countingSortRadioButton = new JRadioButton();
-		countingSortRadioButton.setText(Strings.COUNTING_SORT_RADIO_BUTTON_TEXT);
-		countingSortRadioButton.setBounds(130, 616, 95, 23);
-		container.add(countingSortRadioButton);
+		this.countingSortRadioButton = new JRadioButton();
+		this.countingSortRadioButton.setText(Strings.COUNTING_SORT_RADIO_BUTTON_TEXT);
+		this.countingSortRadioButton.setBounds(130, 616, 95, 23);
+		this.container.add(this.countingSortRadioButton);
 		
-		radixSortRadioButton = new JRadioButton();
-		radixSortRadioButton.setText(Strings.RADIX_SORT_RADIO_BUTTON_TEXT);
-		radixSortRadioButton.setBounds(130, 642, 85, 23);
-		container.add(radixSortRadioButton);
+		this.radixSortRadioButton = new JRadioButton();
+		this.radixSortRadioButton.setText(Strings.RADIX_SORT_RADIO_BUTTON_TEXT);
+		this.radixSortRadioButton.setBounds(130, 642, 85, 23);
+		this.container.add(this.radixSortRadioButton);
 		
-		shellSortRadioButton = new JRadioButton();
-		shellSortRadioButton.setText(Strings.SHELL_SORT_RADIO_BUTTON_TEXT);
-		shellSortRadioButton.setBounds(130, 668, 85, 23);
-		container.add(shellSortRadioButton);
+		this.shellSortRadioButton = new JRadioButton();
+		this.shellSortRadioButton.setText(Strings.SHELL_SORT_RADIO_BUTTON_TEXT);
+		this.shellSortRadioButton.setBounds(130, 668, 85, 23);
+		this.container.add(this.shellSortRadioButton);
 		
-		introSortRadioButton = new JRadioButton();
-		introSortRadioButton.setText(Strings.INTRO_SORT_RADIO_BUTTON_TEXT);
-		introSortRadioButton.setBounds(20, 668, 85, 23);
-		container.add(introSortRadioButton);
+		this.introSortRadioButton = new JRadioButton();
+		this.introSortRadioButton.setText(Strings.INTRO_SORT_RADIO_BUTTON_TEXT);
+		this.introSortRadioButton.setBounds(20, 668, 85, 23);
+		this.container.add(this.introSortRadioButton);
 		
-		radioButtonGroup.add(bubbleSortRadioButton);
-		radioButtonGroup.add(insertionSortRadioButton);
-		radioButtonGroup.add(selectionSortRadioButton);
-		radioButtonGroup.add(mergeSortRadioButton);
-		radioButtonGroup.add(quickSortRadioButton);
-		radioButtonGroup.add(heapSortRadioButton);
-		radioButtonGroup.add(countingSortRadioButton);
-		radioButtonGroup.add(radixSortRadioButton);
-		radioButtonGroup.add(shellSortRadioButton);
-		radioButtonGroup.add(introSortRadioButton);
-		radioButtonGroup.setSelected(bubbleSortRadioButton.getModel(), true);
+		this.radioButtonGroup.add(this.bubbleSortRadioButton);
+		this.radioButtonGroup.add(this.insertionSortRadioButton);
+		this.radioButtonGroup.add(this.selectionSortRadioButton);
+		this.radioButtonGroup.add(this.mergeSortRadioButton);
+		this.radioButtonGroup.add(this.quickSortRadioButton);
+		this.radioButtonGroup.add(this.heapSortRadioButton);
+		this.radioButtonGroup.add(this.countingSortRadioButton);
+		this.radioButtonGroup.add(this.radixSortRadioButton);
+		this.radioButtonGroup.add(this.shellSortRadioButton);
+		this.radioButtonGroup.add(this.introSortRadioButton);
+		this.radioButtonGroup.setSelected(this.bubbleSortRadioButton.getModel(), true);
 		
-		arrayGeneratorSizeLabel = new JLabel();
-		arrayGeneratorSizeLabel.setText(Strings.ARRAY_GENERATOR_SIZE_LABEL_TEXT);
-		arrayGeneratorSizeLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		arrayGeneratorSizeLabel.setBounds(833, 594, 175, 14);
-		container.add(arrayGeneratorSizeLabel);
+		this.arrayGeneratorSizeLabel = new JLabel();
+		this.arrayGeneratorSizeLabel.setText(Strings.ARRAY_GENERATOR_SIZE_LABEL_TEXT);
+		this.arrayGeneratorSizeLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		this.arrayGeneratorSizeLabel.setBounds(833, 594, 175, 14);
+		this.container.add(this.arrayGeneratorSizeLabel);
 		
-		arrayGeneratorSizeTextField = new JFormattedTextField();
-		arrayGeneratorSizeTextField.setColumns(3);
-		arrayGeneratorSizeTextField.setHorizontalAlignment(JTextField.CENTER);
-		arrayGeneratorSizeTextField.setBounds(833, 616, 175, 23);
-		container.add(arrayGeneratorSizeTextField);
+		this.arrayGeneratorSizeTextField = new JFormattedTextField();
+		this.arrayGeneratorSizeTextField.setColumns(3);
+		this.arrayGeneratorSizeTextField.setHorizontalAlignment(JTextField.CENTER);
+		this.arrayGeneratorSizeTextField.setBounds(833, 616, 175, 23);
+		this.container.add(this.arrayGeneratorSizeTextField);
 		
-		arrayGeneratorButton = new JButton();
-		arrayGeneratorButton.setText(Strings.ARRAY_GENERATOR_SIZE_BUTTON_TEXT);
-		arrayGeneratorButton.setBounds(833, 642, 175, 23);
-		arrayGeneratorButton.addActionListener((ActionEvent ev) ->
+		this.arrayGeneratorButton = new JButton();
+		this.arrayGeneratorButton.setText(Strings.ARRAY_GENERATOR_SIZE_BUTTON_TEXT);
+		this.arrayGeneratorButton.setBounds(833, 642, 175, 23);
+		this.arrayGeneratorButton.addActionListener((ActionEvent ev) ->
 		{
 			final UIState uiState = UIState.UIStateBuilder
 					.newBuilder()
 					.setClickedButton(Components.GENERATE_ARRAY_BUTTON)
-					.setArraySizeTextFieldValue(Integer.valueOf(arrayGeneratorSizeTextField.getText()))
+					.setArraySizeTextFieldValue(arrayGeneratorSizeTextField.getText())
 					.build();
 			
-			notifyViewListeners(uiState);
+			this.notifyViewListeners(uiState);
 		});
-		container.add(arrayGeneratorButton);
+		this.container.add(this.arrayGeneratorButton);
 		
-		arraySortButton = new JButton();
-		arraySortButton.setText(Strings.ARRAY_SORT_BUTTON_TEXT);
-		arraySortButton.setBounds(833, 668, 175, 23);
-		arraySortButton.addActionListener((ActionEvent ev) ->
+		this.arraySortButton = new JButton();
+		this.arraySortButton.setText(Strings.ARRAY_SORT_BUTTON_TEXT);
+		this.arraySortButton.setBounds(833, 668, 175, 23);
+		this.arraySortButton.addActionListener((ActionEvent ev) ->
 		{
 			final UIStateBuilder uiStateBuilder = UIState.UIStateBuilder
 					.newBuilder()
@@ -176,6 +176,22 @@ public class MainFrame extends JFrame
 					case Strings.HEAP_SORT_RADIO_BUTTON_TEXT:
 						uiStateBuilder.setSelectedOption(Components.HEAP_SORT_OPTION);
 						break;
+					case Strings.SELECTION_SORT_RADIO_BUTTON_TEXT:
+						uiStateBuilder.setSelectedOption(Components.SELECTION_SORT_OPTION);
+						break;
+					case Strings.COUNTING_SORT_RADIO_BUTTON_TEXT:
+						uiStateBuilder.setSelectedOption(Components.COUNTING_SORT_OPTION);
+						break;
+					case Strings.MERGE_SORT_RADIO_BUTTON_TEXT:
+						uiStateBuilder.setSelectedOption(Components.MERGE_SORT_OPTION);
+					case Strings.RADIX_SORT_RADIO_BUTTON_TEXT:
+						uiStateBuilder.setSelectedOption(Components.RADIX_SORT_OPTION);
+						break;
+					case Strings.INTRO_SORT_RADIO_BUTTON_TEXT:
+						uiStateBuilder.setSelectedOption(Components.INTRO_SORT_OPTION);
+						break;
+					case Strings.SHELL_SORT_RADIO_BUTTON_TEXT:
+						uiStateBuilder.setSelectedOption(Components.SHELL_SORT_OPTION);
 					default:
 						break;
 					}
@@ -183,14 +199,15 @@ public class MainFrame extends JFrame
 			}
 			
 			final UIState uiState = uiStateBuilder.build();
-			notifyViewListeners(uiState);
+			this.notifyViewListeners(uiState);
 		});
-		container.add(arraySortButton);
+		this.arraySortButton.setEnabled(false);
+		this.container.add(this.arraySortButton);
 		
-		chartPanel = new ChartPanel(null);
-		chartPanel.setChart(ChartUtils.getDefaultChart());
-		chartPanel.setBounds(10, 11, 998, 472);
-		container.add(chartPanel);
+		this.chartPanel = new ChartPanel(null);
+		this.chartPanel.setChart(ChartUtils.getDefaultChart());
+		this.chartPanel.setBounds(10, 11, 998, 472);
+		this.container.add(this.chartPanel);
 
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setBounds(100, 100, 1024, 768);
@@ -203,36 +220,44 @@ public class MainFrame extends JFrame
 	
 	public void disableComponents()
 	{
-		bubbleSortRadioButton.setEnabled(false);
-		insertionSortRadioButton.setEnabled(false);
-		selectionSortRadioButton.setEnabled(false);
-		mergeSortRadioButton.setEnabled(false);
-		quickSortRadioButton.setEnabled(false);
-		heapSortRadioButton.setEnabled(false);
-		countingSortRadioButton.setEnabled(false);
-		radixSortRadioButton.setEnabled(false);
-		shellSortRadioButton.setEnabled(false);
-		introSortRadioButton.setEnabled(false);
-		arrayGeneratorSizeTextField.setEnabled(false);
-		arrayGeneratorButton.setEnabled(false);
-		arraySortButton.setEnabled(false);
+		this.bubbleSortRadioButton.setEnabled(false);
+		this.insertionSortRadioButton.setEnabled(false);
+		this.selectionSortRadioButton.setEnabled(false);
+		this.mergeSortRadioButton.setEnabled(false);
+		this.quickSortRadioButton.setEnabled(false);
+		this.heapSortRadioButton.setEnabled(false);
+		this.countingSortRadioButton.setEnabled(false);
+		this.radixSortRadioButton.setEnabled(false);
+		this.shellSortRadioButton.setEnabled(false);
+		this.introSortRadioButton.setEnabled(false);
+		this.arrayGeneratorSizeTextField.setEnabled(false);
+		this.arrayGeneratorButton.setEnabled(false);
 	}
 	
 	public void enableComponents()
 	{
-		bubbleSortRadioButton.setEnabled(true);
-		insertionSortRadioButton.setEnabled(true);
-		selectionSortRadioButton.setEnabled(true);
-		mergeSortRadioButton.setEnabled(true);
-		quickSortRadioButton.setEnabled(true);
-		heapSortRadioButton.setEnabled(true);
-		countingSortRadioButton.setEnabled(true);
-		radixSortRadioButton.setEnabled(true);
-		shellSortRadioButton.setEnabled(true);
-		introSortRadioButton.setEnabled(true);
-		arrayGeneratorSizeTextField.setEnabled(true);
-		arrayGeneratorButton.setEnabled(true);
-		arraySortButton.setEnabled(true);
+		this.bubbleSortRadioButton.setEnabled(true);
+		this.insertionSortRadioButton.setEnabled(true);
+		this.selectionSortRadioButton.setEnabled(true);
+		this.mergeSortRadioButton.setEnabled(true);
+		this.quickSortRadioButton.setEnabled(true);
+		this.heapSortRadioButton.setEnabled(true);
+		this.countingSortRadioButton.setEnabled(true);
+		this.radixSortRadioButton.setEnabled(true);
+		this.shellSortRadioButton.setEnabled(true);
+		this.introSortRadioButton.setEnabled(true);
+		this.arrayGeneratorSizeTextField.setEnabled(true);
+		this.arrayGeneratorButton.setEnabled(true);
+	}
+	
+	public void enableArraySortButton()
+	{
+		this.arraySortButton.setEnabled(true);
+	}
+	
+	public void disableArraySortButton()
+	{
+		this.arraySortButton.setEnabled(false);
 	}
 	
 	public void addViewListener(final ViewListener viewListener)

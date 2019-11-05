@@ -13,8 +13,7 @@ public final class ChartUtils
 	
 	public static JFreeChart getDefaultChart()
 	{
-		final DefaultCategoryDataset dataSet = State.DATA_SET;
-		dataSet.clear();
+		final DefaultCategoryDataset dataSet = new DefaultCategoryDataset();
 		
 		for(int i = 0; i < 10; i++)
 		{
@@ -22,7 +21,6 @@ public final class ChartUtils
 		}
 		
 		final JFreeChart chart = org.jfree.chart.ChartFactory.createBarChart(Strings.BLANK, Strings.BLANK, Strings.BLANK, dataSet, PlotOrientation.VERTICAL, false, false, false);
-		
 		final CategoryPlot categoryPlot = chart.getCategoryPlot();
 		
 		final ValueAxis valueAxis = categoryPlot.getRangeAxis();
@@ -33,8 +31,7 @@ public final class ChartUtils
 	
 	public static void updateDataSet(final int[] array, final ChartPanel chartPanel)
 	{
-		final DefaultCategoryDataset dataSet = State.DATA_SET;
-		dataSet.clear();
+		final DefaultCategoryDataset dataSet = new DefaultCategoryDataset();
 		
 		for(int i = 0; i < array.length; i++)
 		{

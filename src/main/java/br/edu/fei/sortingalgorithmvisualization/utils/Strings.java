@@ -27,6 +27,11 @@ public final class Strings
 	public static final String ARRAY_GENERATOR_SIZE_LABEL_TEXT = "Digite o número de elementos: ";
 	
 	//View Buttons
-	public static final String ARRAY_GENERATOR_SIZE_BUTTON_TEXT = "Gerar";
+	public static final String ARRAY_GENERATOR_SIZE_BUTTON_TEXT = "Gerar Num.";
 	public static final String ARRAY_SORT_BUTTON_TEXT = "Ordenar";
+	
+	//Validation Texts
+	public static final String ERRO_VALIDACAO_MESSAGE_BOX_TITLE = "Erro de Validação";
+	public static final String VALOR_INVALIDO_MESSAGE = "Valor inválido";
+	public static final String VALOR_MAXIMO_MESSAGE = "Valor Máximo: 30 números.";
 }

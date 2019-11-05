@@ -1,19 +1,26 @@
 package br.edu.fei.sortingalgorithmvisualization.presenters;
 
-import java.util.Arrays;
-import java.util.Random;
-
+import javax.swing.JOptionPane;
 import javax.swing.SwingWorker;
 
 import br.edu.fei.sortingalgorithmvisualization.algorithms.Algorithm;
 import br.edu.fei.sortingalgorithmvisualization.algorithms.impl.BubbleSort;
+import br.edu.fei.sortingalgorithmvisualization.algorithms.impl.CountingSort;
 import br.edu.fei.sortingalgorithmvisualization.algorithms.impl.HeapSort;
 import br.edu.fei.sortingalgorithmvisualization.algorithms.impl.InsertionSort;
+import br.edu.fei.sortingalgorithmvisualization.algorithms.impl.IntroSort;
+import br.edu.fei.sortingalgorithmvisualization.algorithms.impl.MergeSort;
 import br.edu.fei.sortingalgorithmvisualization.algorithms.impl.QuickSort;
+import br.edu.fei.sortingalgorithmvisualization.algorithms.impl.RadixSort;
+import br.edu.fei.sortingalgorithmvisualization.algorithms.impl.SelectionSort;
+import br.edu.fei.sortingalgorithmvisualization.algorithms.impl.ShellSort;
 import br.edu.fei.sortingalgorithmvisualization.frames.MainFrame;
 import br.edu.fei.sortingalgorithmvisualization.listeners.ViewListener;
+import br.edu.fei.sortingalgorithmvisualization.utils.ArrayUtils;
 import br.edu.fei.sortingalgorithmvisualization.utils.ChartUtils;
 import br.edu.fei.sortingalgorithmvisualization.utils.State;
+import br.edu.fei.sortingalgorithmvisualization.utils.StringUtils;
+import br.edu.fei.sortingalgorithmvisualization.utils.Strings;
 import br.edu.fei.sortingalgorithmvisualization.utils.UIState;
 
 public final class MainPresenter implements ViewListener
@@ -44,18 +51,22 @@ public final class MainPresenter implements ViewListener
 	
 	private void generateRandomArrayButtonEvent(final UIState uiState)
 	{
-		State.GLOBAL_ARRAY = new int[uiState.getArraySizeTextFieldValue()];
-		Arrays.fill(State.GLOBAL_ARRAY, 0);
-		
-		final Random random = new Random();
-		
-		for(int i = 0; i < State.GLOBAL_ARRAY.length; i++)
+		final String value = uiState.getArraySizeTextFieldValue();
+		if(!StringUtils.isLong(value))
 		{
-			random.setSeed(random.nextLong() * random.nextLong());
-			State.GLOBAL_ARRAY[i] = (random.nextInt(999-1) + 1);
+			JOptionPane.showMessageDialog(null, Strings.VALOR_INVALIDO_MESSAGE, Strings.ERRO_VALIDACAO_MESSAGE_BOX_TITLE, JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		else if(Integer.valueOf(value) > 30)
+		{
+			JOptionPane.showMessageDialog(null, Strings.VALOR_MAXIMO_MESSAGE, Strings.ERRO_VALIDACAO_MESSAGE_BOX_TITLE, JOptionPane.INFORMATION_MESSAGE);
+			return;
 		}
 		
-		ChartUtils.updateDataSet(State.GLOBAL_ARRAY, mainFrame.getChartPanel());
+		State.setGlobalArray(ArrayUtils.generateRandomArray(Integer.valueOf(value)));
+		
+		ChartUtils.updateDataSet(State.getGlobalArray(), mainFrame.getChartPanel());
+		this.mainFrame.enableArraySortButton();
 	}
 	
 	private void sortArrayButtonEvent(final UIState uiState)
@@ -65,23 +76,39 @@ public final class MainPresenter implements ViewListener
 		{
 		case BUBBLE_SORT_OPTION:
 			algorithm = new BubbleSort();
-			this.sortArray(algorithm);
 			break;
 		case QUICK_SORT_OPTION:
 			algorithm = new QuickSort();
-			this.sortArray(algorithm);
 			break;
 		case INSERTION_SORT_OPTION:
 			algorithm = new InsertionSort();
-			this.sortArray(algorithm);
 			break;
 		case HEAP_SORT_OPTION:
 			algorithm = new HeapSort();
-			this.sortArray(algorithm);
+			break;
+		case SELECTION_SORT_OPTION:
+			algorithm = new SelectionSort();
+			break;
+		case COUNTING_SORT_OPTION:
+			algorithm = new CountingSort();
+			break;
+		case MERGE_SORT_OPTION:
+			algorithm = new MergeSort();
+			break;
+		case RADIX_SORT_OPTION:
+			algorithm = new RadixSort();
+			break;
+		case INTRO_SORT_OPTION:
+			algorithm = new IntroSort();
+			break;
+		case SHELL_SORT_OPTION:
+			algorithm = new ShellSort();
 			break;
 		default:
 			break;
 		}
+		
+		this.sortArray(algorithm);
 	}
 	
 	private void sortArray(final Algorithm algorithm)
@@ -92,13 +119,13 @@ public final class MainPresenter implements ViewListener
 			protected Void doInBackground() throws Exception
 			{
 				mainFrame.disableComponents();
-				algorithm.sort(State.GLOBAL_ARRAY, mainFrame.getChartPanel());
+				mainFrame.disableArraySortButton();
+				algorithm.sort(State.getGlobalArray(), mainFrame.getChartPanel());
 				mainFrame.enableComponents();
 				
 				return null;
 			}
 		};
-		
 		worker.execute();
 	}
 }

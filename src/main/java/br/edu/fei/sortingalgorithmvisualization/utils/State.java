@@ -1,9 +1,16 @@
 package br.edu.fei.sortingalgorithmvisualization.utils;
 
-import org.jfree.data.category.DefaultCategoryDataset;
-
 public final class State
 {
-	public static int[] GLOBAL_ARRAY = new int[10];
-	public static DefaultCategoryDataset DATA_SET = new DefaultCategoryDataset();
+	private static int[] globalArray = new int[10];
+	
+	public static int[] getGlobalArray()
+	{
+		return State.globalArray;
+	}
+	
+	public static void setGlobalArray(final int[] globalArray)
+	{
+		State.globalArray = globalArray;
+	}
 }
